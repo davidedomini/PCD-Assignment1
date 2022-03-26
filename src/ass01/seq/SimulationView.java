@@ -16,7 +16,7 @@ import javax.swing.*;
  * @author aricci
  *
  */
-public class SimulationView {
+public class SimulationView implements ModelObserver {
         
 	private VisualiserFrame frame;
 	
@@ -29,12 +29,13 @@ public class SimulationView {
     public SimulationView(int w, int h){
     	frame = new VisualiserFrame(w,h);
     }
-        
-    public void display(ArrayList<Body> bodies, double vt, long iter, Boundary bounds){
- 	   frame.display(bodies, vt, iter, bounds); 
-    }
-    
-    public static class VisualiserFrame extends JFrame {
+
+	@Override
+	public void modelUpdated(Model model) {
+		frame.display((ArrayList<Body>) model.getBodies(), model.getVt(), model.getIter(), model.getBounds());
+	}
+
+	public static class VisualiserFrame extends JFrame {
 
         private VisualiserPanel panel;
 

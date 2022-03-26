@@ -7,11 +7,19 @@ import java.util.Random;
 public class Model {
 
     private final List<Body> bodies;
+    private List<ModelObserver> observers;
     private Boundary bounds;
+
+    private long iter;
+
+    /* virtual time */
+    private double vt = 0;
+
+    /* virtual time step */
+    double dt = 0.001;
 
     public Model(final int nBodies, final Boundary bounds){
         //Generazione dei bodies
-        //bounds = new Boundary(-6.0, -6.0, 6.0, 6.0);
         this.bounds = bounds;
         Random rand = new Random(System.currentTimeMillis());
         bodies = new ArrayList<>();
@@ -21,11 +29,16 @@ public class Model {
             Body b = new Body(i, new P2d(x, y), new V2d(0, 0), 10);
             bodies.add(b);
         }
+
+        this.observers = new ArrayList<>();
     }
 
-    public ArrayList<Body> update(){
+    public void update(long iter){
+
+        this.iter = iter;
+
         //Aggiorna i bodies
-        double dt = 0.001;
+
         for (int i = 0; i < bodies.size(); i++) {
             Body b = bodies.get(i);
 
@@ -51,9 +64,10 @@ public class Model {
             b.checkAndSolveBoundaryCollision(bounds);
         }
 
-        //Notifica gli observer
+        vt = vt + dt;
 
-        return (ArrayList<Body>) this.bodies;
+        //Notifica gli observer
+        notifyObservers();
     }
 
     private V2d computeTotalForceOnBody(Body b) {
@@ -79,4 +93,29 @@ public class Model {
         return totalForce;
     }
 
+    public List<Body> getBodies() {
+        return bodies;
+    }
+
+    public Boundary getBounds() {
+        return bounds;
+    }
+
+    public long getIter() {
+        return iter;
+    }
+
+    public double getVt() {
+        return vt;
+    }
+
+    public void addObserver(ModelObserver obs){
+        observers.add(obs);
+    }
+
+    private void notifyObservers(){
+        for (ModelObserver obs: observers){
+            obs.modelUpdated(this);
+        }
+    }
 }
