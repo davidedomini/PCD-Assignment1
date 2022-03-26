@@ -6,6 +6,8 @@ public class Simulator {
 
 	private SimulationView viewer;
 
+	private Model model;
+
 	/* bodies in the field */
 	ArrayList<Body> bodies;
 
@@ -18,15 +20,16 @@ public class Simulator {
 	/* virtual time step */
 	double dt;
 
-	public Simulator(SimulationView viewer) {
+	public Simulator(SimulationView viewer, Model model, Boundary bounds) {
 		this.viewer = viewer;
-
+		this.model = model;
+		this.bounds = bounds;
 		/* initializing boundary and bodies */
 
 		// testBodySet1_two_bodies();
 		// testBodySet2_three_bodies();
 		// testBodySet3_some_bodies();
-		testBodySet4_many_bodies();
+		//testBodySet4_many_bodies();
 	}
 	
 	public void execute(long nSteps) {
@@ -42,32 +45,9 @@ public class Simulator {
 
 		while (iter < nSteps) {
 
-			/* update bodies velocity */
+			/* update bodies */
 
-			for (int i = 0; i < bodies.size(); i++) {
-				Body b = bodies.get(i);
-
-				/* compute total force on bodies */
-				V2d totalForce = computeTotalForceOnBody(b);
-
-				/* compute instant acceleration */
-				V2d acc = new V2d(totalForce).scalarMul(1.0 / b.getMass());
-
-				/* update velocity */
-				b.updateVelocity(acc, dt);
-			}
-
-			/* compute bodies new pos */
-
-			for (Body b : bodies) {
-				b.updatePos(dt);
-			}
-
-			/* check collisions with boundaries */
-
-			for (Body b : bodies) {
-				b.checkAndSolveBoundaryCollision(bounds);
-			}
+			bodies = model.update();
 
 			/* update virtual time */
 
