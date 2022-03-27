@@ -13,10 +13,10 @@ public class SequentialBodySimulationMain {
 
     	SimulationView viewer = new SimulationView(620,620);
 
-        Model m = new Model(1000, bounds);
+        SimulationModel m = new SimulationModel(1000, bounds);
         m.addObserver(viewer);
 
-    	SimulatorController sim = new SimulatorController(m);
+    	SimulationController sim = new SimulationController(m);
         sim.execute(50000);
     }
 }

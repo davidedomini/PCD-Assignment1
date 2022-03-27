@@ -1,6 +1,10 @@
 package ass01.seq;
 
 
+import ass01.seq.exp.InfiniteForceException;
+import ass01.seq.lib.P2d;
+import ass01.seq.lib.V2d;
+
 /*
  * This class represents a body
  * 

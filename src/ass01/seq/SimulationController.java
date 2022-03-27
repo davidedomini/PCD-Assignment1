@@ -1,10 +1,10 @@
 package ass01.seq;
 
-public class SimulatorController {
+public class SimulationController {
 
-	private Model model;
+	private SimulationModel model;
 
-	public SimulatorController(Model model) {
+	public SimulationController(SimulationModel model) {
 		this.model = model;
 	}
 	

@@ -1,5 +1,7 @@
 package ass01.seq;
 
+import ass01.seq.lib.P2d;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
@@ -31,7 +33,7 @@ public class SimulationView implements ModelObserver {
     }
 
 	@Override
-	public void modelUpdated(Model model) {
+	public void modelUpdated(SimulationModel model) {
 		frame.display((ArrayList<Body>) model.getBodies(), model.getVt(), model.getIter(), model.getBounds());
 	}
 
