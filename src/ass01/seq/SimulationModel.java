@@ -12,18 +12,21 @@ public class SimulationModel {
     private final List<Body> bodies;
     private List<ModelObserver> observers;
     private Boundary bounds;
+    private long totalIter;
     private long iter;
     private int nBodies;
     /* virtual time */
     private double vt = 0;
     /* virtual time step */
-    double dt = 0.001;
+    private double dt = 0.001;
 
-    public SimulationModel(final int nBodies, final Boundary bounds){
+    public SimulationModel(final int nBodies, final Boundary bounds, final long totalIter){
         this.bounds = bounds;
         this.nBodies = nBodies;
         bodies = new ArrayList<>();
         this.observers = new ArrayList<>();
+        this.totalIter = totalIter;
+        this.iter = 0;
     }
 
     // generate bodies
@@ -37,62 +40,19 @@ public class SimulationModel {
         }
     }
 
-    public void update(long iter){
-
-        this.iter = iter;
-
-        //update bodies
-        for (int i = 0; i < bodies.size(); i++) {
-            Body b = bodies.get(i);
-
-            /* compute total force on bodies */
-            V2d totalForce = computeTotalForceOnBody(b);
-
-            /* compute instant acceleration */
-            V2d acc = new V2d(totalForce).scalarMul(1.0 / b.getMass());
-
-            /* update velocity */
-            b.updateVelocity(acc, dt);
-        }
-
-        for (Body b : bodies) {
-            /* compute bodies new pos */
-            b.updatePos(dt);
-            /* check collisions with boundaries */
-            b.checkAndSolveBoundaryCollision(bounds);
-        }
-
-//        for (Body b : bodies) {
-//            b.checkAndSolveBoundaryCollision(bounds);
-//        }
-
-        vt = vt + dt;
+    public void update(){
 
         //Notifica gli observer
         notifyObservers();
     }
 
-    private V2d computeTotalForceOnBody(Body b) {
+    public void updateVirtualTime(){
+        vt = vt + dt;
+        iter++;
+    }
 
-        V2d totalForce = new V2d(0, 0);
-
-        /* compute total repulsive force */
-
-        for (int j = 0; j < bodies.size(); j++) {
-            Body otherBody = bodies.get(j);
-            if (!b.equals(otherBody)) {
-                try {
-                    V2d forceByOtherBody = b.computeRepulsiveForceBy(otherBody);
-                    totalForce.sum(forceByOtherBody);
-                } catch (Exception ex) {
-                }
-            }
-        }
-
-        /* add friction force */
-        totalForce.sum(b.getCurrentFrictionForce());
-
-        return totalForce;
+    public boolean isCompleted(){
+        return totalIter == iter;
     }
 
     public List<Body> getBodies() {
@@ -112,6 +72,8 @@ public class SimulationModel {
     }
 
     public int getnBodies() { return nBodies;}
+
+    public double getDt() { return dt;}
 
     public void addObserver(ModelObserver obs){
         observers.add(obs);

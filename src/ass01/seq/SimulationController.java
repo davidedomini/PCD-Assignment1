@@ -2,26 +2,16 @@ package ass01.seq;
 
 public class SimulationController {
 
-	private SimulationModel model;
+	private SimulationModel simModel;
+	private int nWorkers;
 
-	public SimulationController(SimulationModel model) {
-		this.model = model;
+	public SimulationController(SimulationModel simModel, int nWorkers) {
+		this.simModel = simModel;
+		this.nWorkers = nWorkers;
 	}
 	
-	public void execute(long nSteps) {
-
-		long iter = 0;
-
-		/* simulation loop */
-
-		while (iter < nSteps) {
-
-			/* update bodies */
-
-			model.update(iter);
-
-			/* update iteration */
-			iter++;
-		}
+	public void execute() {
+		Master master = new Master(simModel, nWorkers);
+		master.start();
 	}
 }
