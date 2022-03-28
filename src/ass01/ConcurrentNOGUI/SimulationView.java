@@ -1,4 +1,4 @@
-package ass01.seq;
+package ass01.ConcurrentNOGUI;
 
 import ass01.lib.Body;
 import ass01.lib.Boundary;
@@ -35,7 +35,7 @@ public class SimulationView implements ModelObserver {
     }
 
 	@Override
-	public void modelUpdated(Model model) {
+	public void modelUpdated(SimulationModel model) {
 		frame.display((ArrayList<Body>) model.getBodies(), model.getVt(), model.getIter(), model.getBounds());
 	}
 
