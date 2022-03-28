@@ -1,6 +1,7 @@
 package ass01.seq;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CyclicBarrier;
 
@@ -36,6 +37,8 @@ public class Master extends Thread{
             start += nBodiesForWorker;
         }
 
+        long initialTime = Calendar.getInstance().getTimeInMillis();
+
         try{
             while(!simModel.isCompleted()){
                 readyToStart.await();
@@ -44,6 +47,9 @@ public class Master extends Thread{
                 simModel.updateVirtualTime();
             }
         } catch (Exception exception){ }
+
+        long finishTime = Calendar.getInstance().getTimeInMillis();
+        System.out.println("Execution time: " + (finishTime-initialTime));
 
         for (Worker w: workers){
             w.interrupt();

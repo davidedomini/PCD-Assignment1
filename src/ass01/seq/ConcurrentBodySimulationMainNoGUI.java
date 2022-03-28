@@ -13,8 +13,8 @@ public class ConcurrentBodySimulationMainNoGUI {
 
 //    	SimulationView viewer = new SimulationView(620,620);
 
-        long totalIter = 1000;
-        int nBodies = 1000;
+        long totalIter = 50000;
+        int nBodies = 5000;
 
         SimulationModel simModel = new SimulationModel(nBodies, bounds, totalIter);
 //        simModel.addObserver(viewer);
