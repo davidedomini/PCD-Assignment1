@@ -2,6 +2,8 @@ package ass01.seq;
 
 import ass01.lib.Boundary;
 
+import java.util.Calendar;
+
 /**
  * Bodies simulation - legacy code: sequential, unstructured
  * 
@@ -15,10 +17,14 @@ public class SequentialBodySimulationMain {
 
     	SimulationView viewer = new SimulationView(620,620);
 
-        Model m = new Model(1000, bounds);
+        Model m = new Model(5000, bounds);
         m.addObserver(viewer);
 
     	SimulatorController sim = new SimulatorController(m);
-        sim.execute(50000);
+        long s = Calendar.getInstance().getTimeInMillis();
+        sim.execute(1000);
+        long f = Calendar.getInstance().getTimeInMillis();
+
+        System.out.println("time:" + (f-s));
     }
 }

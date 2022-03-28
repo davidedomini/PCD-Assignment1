@@ -45,6 +45,7 @@ public class Master extends Thread{
                 readyToComputeNewPositions.await();
                 readyToDisplay.await();
                 simModel.updateVirtualTime();
+                simModel.update();
             }
         } catch (Exception exception){ }
 

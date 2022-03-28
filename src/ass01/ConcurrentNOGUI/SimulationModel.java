@@ -1,9 +1,6 @@
 package ass01.ConcurrentNOGUI;
 
-import ass01.lib.Body;
-import ass01.lib.Boundary;
-import ass01.lib.P2d;
-import ass01.lib.V2d;
+import ass01.lib.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +40,6 @@ public class SimulationModel {
     }
 
     public void update(){
-
         //Notifica gli observer
         notifyObservers();
     }

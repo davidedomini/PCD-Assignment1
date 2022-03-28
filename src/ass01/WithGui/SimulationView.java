@@ -1,7 +1,9 @@
-package ass01.ConcurrentNOGUI;
+package ass01.WithGui;
 
+import ass01.ConcurrentNOGUI.SimulationModel;
 import ass01.lib.Body;
 import ass01.lib.Boundary;
+import ass01.lib.ModelObserver;
 import ass01.lib.P2d;
 
 import java.awt.Graphics;
