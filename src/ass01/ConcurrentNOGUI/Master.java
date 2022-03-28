@@ -49,6 +49,7 @@ public class Master extends Thread{
             }
         } catch (Exception exception){ }
 
+
         long f = Calendar.getInstance().getTimeInMillis();
 
         System.out.println("Time:" + (f-s));
