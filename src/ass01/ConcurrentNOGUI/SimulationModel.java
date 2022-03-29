@@ -49,6 +49,17 @@ public class SimulationModel {
         iter++;
     }
 
+    public void reset(){
+        this.iter = 0;
+        this.vt = 0;
+        this.init();
+    }
+
+
+    public long getTotalIter() {
+        return totalIter;
+    }
+
     public boolean isCompleted(){
         return totalIter == iter;
     }

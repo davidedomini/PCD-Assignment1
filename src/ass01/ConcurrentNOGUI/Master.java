@@ -49,7 +49,7 @@ public class Master extends Thread{
             }
         } catch (Exception exception){ }
 
-
+        System.out.println("Esco dal ciclo master");
         long f = Calendar.getInstance().getTimeInMillis();
 
         System.out.println("Time:" + (f-s));

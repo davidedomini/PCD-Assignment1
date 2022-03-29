@@ -1,18 +1,14 @@
 package ass01.WithGui;
 
+import ass01.ConcurrentNOGUI.SimulationController;
 import ass01.ConcurrentNOGUI.SimulationModel;
 import ass01.lib.Body;
 import ass01.lib.Boundary;
 import ass01.lib.ModelObserver;
 import ass01.lib.P2d;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.RenderingHints;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
@@ -25,15 +21,15 @@ import javax.swing.*;
 public class SimulationView implements ModelObserver {
         
 	private VisualiserFrame frame;
-	
+
     /**
      * Creates a view of the specified size (in pixels)
      * 
      * @param w
      * @param h
      */
-    public SimulationView(int w, int h){
-    	frame = new VisualiserFrame(w,h);
+    public SimulationView(int w, int h, SimulationController controller){
+    	frame = new VisualiserFrame(w,h, controller);
     }
 
 	@Override
@@ -41,16 +37,20 @@ public class SimulationView implements ModelObserver {
 		frame.display((ArrayList<Body>) model.getBodies(), model.getVt(), model.getIter(), model.getBounds());
 	}
 
-	public static class VisualiserFrame extends JFrame {
+	public static class VisualiserFrame extends JFrame implements ActionListener {
 
-        private VisualiserPanel panel;
+        private VisualiserPanel panelBodies;
+		private JButton startButton;
+		private JButton stopButton;
+		private SimulationController controller;
 
-        public VisualiserFrame(int w, int h){
+        public VisualiserFrame(int w, int h, SimulationController controller){
+			this.controller = controller;
             setTitle("Bodies Simulation");
-            setSize(w,h);
+            setSize(w+200,h+200);
             setResizable(false);
-            panel = new VisualiserPanel(w,h);
-            getContentPane().add(panel);
+            panelBodies = new VisualiserPanel(w,h);
+            getContentPane().add(panelBodies);
             addWindowListener(new WindowAdapter(){
     			public void windowClosing(WindowEvent ev){
     				System.exit(-1);
@@ -59,22 +59,52 @@ public class SimulationView implements ModelObserver {
     				System.exit(-1);
     			}
     		});
+
+			//Start button
+			JPanel buttonsPanel = new JPanel();
+			buttonsPanel.setSize(100, 50);
+			this.startButton = new JButton("Start");
+			this.stopButton = new JButton("Stop");
+			buttonsPanel.add(this.startButton);
+			buttonsPanel.add(this.stopButton);
+
+			this.stopButton.addActionListener(this);
+			this.startButton.addActionListener(this);
+
+			JPanel mainPanel = new JPanel();
+			LayoutManager layout = new BorderLayout();
+			mainPanel.setLayout(layout);
+			mainPanel.add(BorderLayout.CENTER,panelBodies);
+			mainPanel.add(BorderLayout.SOUTH,buttonsPanel);
+			setContentPane(mainPanel);
+
+			setLocationRelativeTo(null);
     		this.setVisible(true);
         }
         
         public void display(ArrayList<Body> bodies, double vt, long iter, Boundary bounds){
         	try {
 	        	SwingUtilities.invokeAndWait(() -> {
-	        		panel.display(bodies, vt, iter, bounds);
+	        		panelBodies.display(bodies, vt, iter, bounds);
 	            	repaint();
 	        	});
         	} catch (Exception ex) {}
         };
         
         public void updateScale(double k) {
-        	panel.updateScale(k);
-        }    	
-    }
+        	panelBodies.updateScale(k);
+        }
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource() == this.stopButton){
+				controller.stop();
+			}else if(e.getSource() == this.startButton){
+				controller.restart();
+			}
+
+		}
+	}
 
     public static class VisualiserPanel extends JPanel implements KeyListener {
         
