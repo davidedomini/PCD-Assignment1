@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class SimulationModel {
 
-    private final List<Body> bodies;
+    private List<Body> bodies;
     private List<ModelObserver> observers;
     private Boundary bounds;
     private long totalIter;
@@ -22,7 +22,6 @@ public class SimulationModel {
     public SimulationModel(final int nBodies, final Boundary bounds, final long totalIter){
         this.bounds = bounds;
         this.nBodies = nBodies;
-        bodies = new ArrayList<>();
         this.observers = new ArrayList<>();
         this.totalIter = totalIter;
         this.iter = 0;
@@ -30,6 +29,7 @@ public class SimulationModel {
 
     // generate bodies
     public void init(){
+        this.bodies = new ArrayList<>();
         Random rand = new Random(System.currentTimeMillis());
         for (int i = 0; i < nBodies; i++) {
             double x = bounds.getX0()*0.25 + rand.nextDouble() * (bounds.getX1() - bounds.getX0()) * 0.25;
@@ -52,9 +52,8 @@ public class SimulationModel {
     public void reset(){
         this.iter = 0;
         this.vt = 0;
-        this.init();
+//        this.init();
     }
-
 
     public long getTotalIter() {
         return totalIter;

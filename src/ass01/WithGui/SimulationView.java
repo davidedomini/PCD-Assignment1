@@ -70,6 +70,7 @@ public class SimulationView implements ModelObserver {
 
 			this.stopButton.addActionListener(this);
 			this.startButton.addActionListener(this);
+			startButton.setEnabled(false);
 
 			JPanel mainPanel = new JPanel();
 			LayoutManager layout = new BorderLayout();
@@ -99,10 +100,13 @@ public class SimulationView implements ModelObserver {
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == this.stopButton){
 				controller.stop();
+				stopButton.setEnabled(false);
+				startButton.setEnabled(true);
 			}else if(e.getSource() == this.startButton){
 				controller.restart();
+				stopButton.setEnabled(true);
+				startButton.setEnabled(false);
 			}
-
 		}
 	}
 
@@ -182,6 +186,7 @@ public class SimulationView implements ModelObserver {
 		@Override
 		public void keyPressed(KeyEvent e) {
 				if (e.getKeyCode() == 38){  		/* KEY UP */
+					System.out.println("Ho premuto il tasto su");
 					scale *= 1.1;
 				} else if (e.getKeyCode() == 40){  	/* KEY DOWN */
 					scale *= 0.9;  

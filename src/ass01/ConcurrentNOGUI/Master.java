@@ -1,5 +1,7 @@
 package ass01.ConcurrentNOGUI;
 
+import ass01.WithGui.StopFlag;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -10,10 +12,12 @@ public class Master extends Thread{
     private SimulationModel simModel;
     private int nWorkers;
     private List<Worker> workers;
+    private StopFlag stopFlag;
 
-    public Master(SimulationModel m, int nWorkers){
+    public Master(SimulationModel m, int nWorkers, StopFlag stopFlag){
         this.simModel = m;
         this.nWorkers = nWorkers;
+        this.stopFlag = stopFlag;
     }
 
     public void run(){
@@ -40,7 +44,7 @@ public class Master extends Thread{
         long s = Calendar.getInstance().getTimeInMillis();
 
         try{
-            while(!simModel.isCompleted()){
+            while(!simModel.isCompleted() && !stopFlag.getStopFlag()){
                 readyToStart.await();
                 readyToComputeNewPositions.await();
                 readyToDisplay.await();
