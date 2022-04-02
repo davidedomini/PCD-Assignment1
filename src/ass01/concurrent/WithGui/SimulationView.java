@@ -1,7 +1,7 @@
-package ass01.WithGui;
+package ass01.concurrent.WithGui;
 
-import ass01.ConcurrentNOGUI.SimulationController;
-import ass01.ConcurrentNOGUI.SimulationModel;
+import ass01.lib.SimulationController;
+import ass01.lib.SimulationModel;
 import ass01.lib.Body;
 import ass01.lib.Boundary;
 import ass01.lib.ModelObserver;
@@ -186,7 +186,6 @@ public class SimulationView implements ModelObserver {
 		@Override
 		public void keyPressed(KeyEvent e) {
 				if (e.getKeyCode() == 38){  		/* KEY UP */
-					System.out.println("Ho premuto il tasto su");
 					scale *= 1.1;
 				} else if (e.getKeyCode() == 40){  	/* KEY DOWN */
 					scale *= 0.9;  

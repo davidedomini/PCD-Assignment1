@@ -1,8 +1,6 @@
-package ass01.ConcurrentNOGUI;
+package ass01.lib;
 
-import ass01.WithGui.SimulationView;
-import ass01.WithGui.StopFlag;
-import ass01.lib.Boundary;
+import ass01.concurrent.WithGui.StopFlag;
 
 public class SimulationController {
 
@@ -24,7 +22,6 @@ public class SimulationController {
 		}
 	}
 
-	//todo
 	public void restart(){
 		simModel.reset();
 		stopFlag.setStopFlag(false);

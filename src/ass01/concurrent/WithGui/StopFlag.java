@@ -1,4 +1,4 @@
-package ass01.WithGui;
+package ass01.concurrent.WithGui;
 
 public class StopFlag {
 

@@ -1,10 +1,10 @@
-package ass01.WithGui;
+package ass01.concurrent.WithGui;
 
-import ass01.ConcurrentNOGUI.SimulationController;
-import ass01.ConcurrentNOGUI.SimulationModel;
+import ass01.lib.SimulationController;
+import ass01.lib.SimulationModel;
 import ass01.lib.Boundary;
 
-public class ConcurrentBodyMainWithGui {
+public class SimulationMainWithGui {
 
     public static void main(String[] args) {
 

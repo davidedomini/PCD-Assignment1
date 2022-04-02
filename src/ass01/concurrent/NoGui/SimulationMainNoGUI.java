@@ -1,29 +1,26 @@
-package ass01.ConcurrentNOGUI;
+package ass01.concurrent.NoGui;
 
 import ass01.lib.Boundary;
+import ass01.lib.SimulationController;
+import ass01.lib.SimulationModel;
 
 /**
  * Bodies simulation - legacy code: sequential, unstructured
  * 
  * @author aricci
  */
-public class ConcurrentBodySimulationMainNoGUI {
+public class SimulationMainNoGUI {
 
     public static void main(String[] args) {
 
         Boundary bounds = new Boundary(-6.0, -6.0, 6.0, 6.0);
 
-//    	SimulationView viewer = new SimulationView(620,620);
-
         long totalIter = 1000;
         int nBodies = 100;
 
         SimulationModel simModel = new SimulationModel(nBodies, bounds, totalIter);
-//        simModel.addObserver(viewer);
-
         int nWorkers = Runtime.getRuntime().availableProcessors() + 1;
-        nWorkers = 2;
-        System.out.println("CPU: " + nWorkers);
+        System.out.println("Available CPU: " + (nWorkers-1));
     	SimulationController simController = new SimulationController(simModel, nWorkers);
         simController.execute();
     }

@@ -1,4 +1,4 @@
-package ass01.ConcurrentNOGUI;
+package ass01.lib;
 
 import ass01.lib.Body;
 import ass01.lib.Boundary;
