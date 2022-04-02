@@ -9,7 +9,7 @@ import java.util.Calendar;
  * 
  * @author aricci
  */
-public class SequentialBodySimulationMain {
+public class SequentialSimulationMain {
 
     public static void main(String[] args) {
 

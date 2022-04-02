@@ -1,10 +1,10 @@
 package ass01.concurrent.WithGui;
 
-import ass01.lib.SimulationController;
-import ass01.lib.SimulationModel;
+import ass01.concurrent.SimulationController;
+import ass01.concurrent.SimulationModel;
 import ass01.lib.Body;
 import ass01.lib.Boundary;
-import ass01.lib.ModelObserver;
+import ass01.concurrent.ModelObserver;
 import ass01.lib.P2d;
 
 import java.awt.*;

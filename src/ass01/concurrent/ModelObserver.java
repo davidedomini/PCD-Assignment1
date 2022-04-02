@@ -1,4 +1,4 @@
-package ass01.lib;
+package ass01.concurrent;
 
 public interface ModelObserver {
 

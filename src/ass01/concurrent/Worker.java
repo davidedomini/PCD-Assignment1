@@ -1,4 +1,4 @@
-package ass01.lib;
+package ass01.concurrent;
 
 import ass01.lib.Body;
 import ass01.lib.Boundary;

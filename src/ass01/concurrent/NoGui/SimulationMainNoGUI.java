@@ -1,8 +1,8 @@
 package ass01.concurrent.NoGui;
 
 import ass01.lib.Boundary;
-import ass01.lib.SimulationController;
-import ass01.lib.SimulationModel;
+import ass01.concurrent.SimulationController;
+import ass01.concurrent.SimulationModel;
 
 /**
  * Bodies simulation - legacy code: sequential, unstructured

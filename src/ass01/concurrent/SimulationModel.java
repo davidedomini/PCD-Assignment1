@@ -1,6 +1,10 @@
-package ass01.lib;
+package ass01.concurrent;
 
-import ass01.lib.*;
+import ass01.concurrent.ModelObserver;
+import ass01.lib.Body;
+import ass01.lib.Boundary;
+import ass01.lib.P2d;
+import ass01.lib.V2d;
 
 import java.util.ArrayList;
 import java.util.List;
