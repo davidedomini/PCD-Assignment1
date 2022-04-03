@@ -1,6 +1,6 @@
 package ass01.concurrent;
 
-import ass01.concurrent.ModelObserver;
+import ass01.concurrent.WithGui.ModelObserver;
 import ass01.lib.Body;
 import ass01.lib.Boundary;
 import ass01.lib.P2d;

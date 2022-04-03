@@ -1,0 +1,1529 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: e042eaf)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 92 and seed 7288618274951826633 with 4 workers on 8 cores with 608MB heap and 1365MB offheap memory [pid: 49365] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/davidedomini/Documents/Ass01.toolbox/Model_1/MC.tla
+Parsing file /Users/davidedomini/Documents/Ass01.toolbox/Model_1/Ass01.tla
+Parsing file /Users/davidedomini/Desktop/Università/PCD/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/TLC.tla (file:/Users/davidedomini/Desktop/Università/PCD/TLA+%20Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/TLC.tla)
+Parsing file /Users/davidedomini/Desktop/Università/PCD/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Integers.tla (file:/Users/davidedomini/Desktop/Università/PCD/TLA+%20Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Integers.tla)
+Parsing file /Users/davidedomini/Desktop/Università/PCD/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Sequences.tla (file:/Users/davidedomini/Desktop/Università/PCD/TLA+%20Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Sequences.tla)
+Parsing file /Users/davidedomini/Desktop/Università/PCD/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Naturals.tla (file:/Users/davidedomini/Desktop/Università/PCD/TLA+%20Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/Naturals.tla)
+Parsing file /Users/davidedomini/Desktop/Università/PCD/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/FiniteSets.tla (file:/Users/davidedomini/Desktop/Università/PCD/TLA+%20Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202203260600/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module Ass01
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2022-03-30 10:02:40)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2022-03-30 10:02:41.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2114:1 @!@!@
+Deadlock reached.
+@!@!@ENDMSG 2114 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ maxIter = 10
+/\ processReady = 0
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "MainLoopMaster",
+  worker1 |-> "MainLoopW1",
+  worker2 |-> "MainLoopW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <MainLoopMaster line 174, col 19 to line 181, col 59 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 0
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "IncReadyToStart",
+  worker1 |-> "MainLoopW1",
+  worker2 |-> "MainLoopW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <IncReadyToStart line 183, col 20 to line 188, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 1
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "ReadyToStart", worker1 |-> "MainLoopW1", worker2 |-> "MainLoopW2"]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <MainLoopW1 line 276, col 15 to line 283, col 45 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 1
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "ReadyToStart",
+  worker1 |-> "IncReadyToStartW1",
+  worker2 |-> "MainLoopW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <IncReadyToStartW1 line 285, col 22 to line 291, col 46 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 2
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "ReadyToStart",
+  worker1 |-> "ReadyToStartW1",
+  worker2 |-> "MainLoopW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <MainLoopW2 line 373, col 15 to line 380, col 45 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 2
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "ReadyToStart",
+  worker1 |-> "ReadyToStartW1",
+  worker2 |-> "IncReadyToStartW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <IncReadyToStartW2 line 382, col 22 to line 388, col 46 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "ReadyToStart",
+  worker1 |-> "ReadyToStartW1",
+  worker2 |-> "ReadyToStartW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <ReadyToStart line 190, col 17 to line 199, col 78 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "IncUpdatedVelocity",
+  worker1 |-> "ReadyToStartW1",
+  worker2 |-> "ReadyToStartW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <ReadyToStartW1 line 293, col 19 to line 301, col 80 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "IncUpdatedVelocity",
+  worker1 |-> "UpdVelB1",
+  worker2 |-> "ReadyToStartW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 0
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <IncUpdatedVelocity line 209, col 23 to line 215, col 47 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "UpdatedVel", worker1 |-> "UpdVelB1", worker2 |-> "ReadyToStartW2"]
+/\ allReady = TRUE
+/\ updatedVelocity = 1
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <UpdVelB1 line 303, col 13 to line 309, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "UpdatedVel", worker1 |-> "UpdVelB2", worker2 |-> "ReadyToStartW2"]
+/\ allReady = TRUE
+/\ updatedVelocity = 1
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <UpdVelB2 line 311, col 13 to line 317, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [ master |-> "UpdatedVel",
+  worker1 |-> "IncUpdatedVelw1",
+  worker2 |-> "ReadyToStartW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 1
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <ReadyToStartW2 line 390, col 19 to line 398, col 80 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "UpdatedVel", worker1 |-> "IncUpdatedVelw1", worker2 |-> "UpdVelB3"]
+/\ allReady = TRUE
+/\ updatedVelocity = 1
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <IncUpdatedVelw1 line 319, col 20 to line 324, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 1],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "UpdatedVel", worker1 |-> "UpdatedVelW1", worker2 |-> "UpdVelB3"]
+/\ allReady = TRUE
+/\ updatedVelocity = 2
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <UpdVelB3 line 400, col 13 to line 406, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 1] >>
+/\ pc = [master |-> "UpdatedVel", worker1 |-> "UpdatedVelW1", worker2 |-> "UpdVelB4"]
+/\ allReady = TRUE
+/\ updatedVelocity = 2
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <UpdVelB4 line 408, col 13 to line 414, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedVel",
+  worker1 |-> "UpdatedVelW1",
+  worker2 |-> "IncUpdatedVelw2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 2
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <IncUpdatedVelw2 line 416, col 20 to line 421, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedVel",
+  worker1 |-> "UpdatedVelW1",
+  worker2 |-> "UpdatedVelW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = FALSE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+18: <UpdatedVel line 217, col 15 to line 226, col 76 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [ master |-> "IncUpdatedPosition",
+  worker1 |-> "UpdatedVelW1",
+  worker2 |-> "UpdatedVelW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+19: <IncUpdatedPosition line 237, col 23 to line 243, col 47 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedPos",
+  worker1 |-> "UpdatedVelW1",
+  worker2 |-> "UpdatedVelW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+20: <UpdatedVelW1 line 326, col 17 to line 334, col 78 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [master |-> "UpdatedPos", worker1 |-> "UpdPosB1", worker2 |-> "UpdatedVelW2"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+21: <UpdatedVelW2 line 423, col 17 to line 431, col 78 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [master |-> "UpdatedPos", worker1 |-> "UpdPosB1", worker2 |-> "UpdPosB3"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+22: <UpdPosB3 line 433, col 13 to line 439, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 0, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [master |-> "UpdatedPos", worker1 |-> "UpdPosB1", worker2 |-> "UpdPosB4"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+23: <UpdPosB1 line 336, col 13 to line 342, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 0, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [master |-> "UpdatedPos", worker1 |-> "UpdPosB2", worker2 |-> "UpdPosB4"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+24: <UpdPosB2 line 344, col 13 to line 350, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 0, vel |-> 2] >>
+/\ pc = [master |-> "UpdatedPos", worker1 |-> "IncUpdatedPosW1", worker2 |-> "UpdPosB4"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+25: <UpdPosB4 line 441, col 13 to line 447, col 35 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedPos",
+  worker1 |-> "IncUpdatedPosW1",
+  worker2 |-> "IncUpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+26: <IncUpdatedPosW1 line 352, col 20 to line 357, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedPos",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "IncUpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+27: <IncUpdatedPosW2 line 449, col 20 to line 454, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedPos",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+28: <UpdatedPos line 245, col 15 to line 254, col 72 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [master |-> "NewIter", worker1 |-> "UpdatedPosW1", worker2 |-> "UpdatedPosW2"]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = TRUE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 0
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+29: <NewIter line 264, col 12 to line 269, col 73 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "MainLoopMaster",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = TRUE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+30: <MainLoopMaster line 174, col 19 to line 181, col 59 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 3
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "IncReadyToStart",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = TRUE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+31: <IncReadyToStart line 183, col 20 to line 188, col 81 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 4
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "ReadyToStart",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = TRUE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+32: <ReadyToStart line 190, col 17 to line 199, col 78 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 4
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "ResetPosBarrier",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = TRUE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+33: <ResetPosBarrier line 201, col 20 to line 207, col 60 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 4
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "IncUpdatedVelocity",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 3
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+34: <IncUpdatedVelocity line 209, col 23 to line 215, col 47 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 4
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedVel",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 4
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+35: <UpdatedVel line 217, col 15 to line 226, col 76 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 4
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "ResetReadyBarrier",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = TRUE
+/\ updatedVelocity = 4
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+36: <ResetReadyBarrier line 228, col 22 to line 235, col 46 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 0
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "IncUpdatedPosition",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 4
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+37: <IncUpdatedPosition line 237, col 23 to line 243, col 47 of module Ass01>
+/\ maxIter = 10
+/\ processReady = 0
+/\ nWorkers = 2
+/\ bodies = << [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2],
+   [pos |-> 1, vel |-> 2] >>
+/\ pc = [ master |-> "UpdatedPos",
+  worker1 |-> "UpdatedPosW1",
+  worker2 |-> "UpdatedPosW2" ]
+/\ allReady = FALSE
+/\ updatedVelocity = 4
+/\ allPositionsUpdated = FALSE
+/\ body = [pos |-> 0, vel |-> 1]
+/\ allVelocitiesUpdated = TRUE
+/\ iter = 1
+/\ updatedPosition = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2022-03-30 10:02:41
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 158, col 1 to line 158, col 4 of module Ass01>: 5:5
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 162, col 12 to line 162, col 27 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 164, col 12 to line 164, col 39 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 166, col 12 to line 166, col 38 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 168, col 12 to line 168, col 40 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 169, col 12 to line 169, col 47 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 170, col 12 to line 172, col 76 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 170, col 17 to line 172, col 76 of module Ass01: 5:15
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 170, col 27 to line 170, col 33 of module Ass01: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MainLoopMaster line 174, col 1 to line 174, col 14 of module Ass01>: 5:69
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 174, col 22 to line 174, col 52 of module Ass01: 794
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 174, col 22 to line 174, col 33 of module Ass01: 725
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 175, col 25 to line 175, col 38 of module Ass01: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 176, col 30 to line 176, col 81 of module Ass01: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 177, col 33 to line 177, col 70 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 178, col 22 to line 181, col 59 of module Ass01: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncReadyToStart line 183, col 1 to line 183, col 15 of module Ass01>: 2:70
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 183, col 23 to line 183, col 54 of module Ass01: 787
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 183, col 23 to line 183, col 34 of module Ass01: 717
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 184, col 23 to line 184, col 54 of module Ass01: 70
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 185, col 23 to line 185, col 68 of module Ass01: 70
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 186, col 23 to line 188, col 81 of module Ass01: 70
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ReadyToStart line 190, col 1 to line 190, col 12 of module Ass01>: 3:80
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 190, col 20 to line 190, col 48 of module Ass01: 789
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 190, col 20 to line 190, col 31 of module Ass01: 709
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 191, col 23 to line 191, col 38 of module Ass01: 104
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 192, col 28 to line 193, col 82 of module Ass01: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 194, col 31 to line 194, col 38 of module Ass01: 51
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 195, col 31 to line 195, col 79 of module Ass01: 51
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 196, col 31 to line 196, col 48 of module Ass01: 51
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 197, col 20 to line 199, col 78 of module Ass01: 80
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ResetPosBarrier line 201, col 1 to line 201, col 15 of module Ass01>: 13:43
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 201, col 23 to line 201, col 54 of module Ass01: 744
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 201, col 23 to line 201, col 34 of module Ass01: 701
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 202, col 23 to line 202, col 50 of module Ass01: 43
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 203, col 23 to line 203, col 42 of module Ass01: 43
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 204, col 23 to line 204, col 74 of module Ass01: 43
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 205, col 23 to line 207, col 60 of module Ass01: 43
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedVelocity line 209, col 1 to line 209, col 18 of module Ass01>: 18:68
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 209, col 26 to line 209, col 60 of module Ass01: 765
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 209, col 26 to line 209, col 37 of module Ass01: 697
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 210, col 26 to line 210, col 63 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 211, col 26 to line 211, col 69 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 212, col 26 to line 215, col 47 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedVel line 217, col 1 to line 217, col 10 of module Ass01>: 12:56
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 217, col 18 to line 217, col 44 of module Ass01: 745
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 217, col 18 to line 217, col 29 of module Ass01: 689
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 218, col 21 to line 218, col 39 of module Ass01: 108
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 219, col 26 to line 220, col 80 of module Ass01: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 221, col 29 to line 221, col 48 of module Ass01: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 222, col 29 to line 222, col 79 of module Ass01: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 223, col 29 to line 223, col 58 of module Ass01: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 224, col 18 to line 226, col 76 of module Ass01: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ResetReadyBarrier line 228, col 1 to line 228, col 17 of module Ass01>: 12:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 228, col 25 to line 228, col 58 of module Ass01: 705
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 228, col 25 to line 228, col 36 of module Ass01: 681
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 229, col 25 to line 229, col 41 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 230, col 25 to line 230, col 41 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 231, col 25 to line 231, col 76 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 232, col 25 to line 235, col 46 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedPosition line 237, col 1 to line 237, col 18 of module Ass01>: 9:46
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 237, col 26 to line 237, col 60 of module Ass01: 723
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 237, col 26 to line 237, col 37 of module Ass01: 677
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 238, col 26 to line 238, col 63 of module Ass01: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 239, col 26 to line 239, col 69 of module Ass01: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 240, col 26 to line 243, col 47 of module Ass01: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedPos line 245, col 1 to line 245, col 10 of module Ass01>: 5:69
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 245, col 18 to line 245, col 44 of module Ass01: 738
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 245, col 18 to line 245, col 29 of module Ass01: 669
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 246, col 21 to line 246, col 39 of module Ass01: 134
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 247, col 26 to line 248, col 69 of module Ass01: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 250, col 29 to line 250, col 77 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 251, col 29 to line 251, col 57 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 252, col 18 to line 254, col 72 of module Ass01: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ResetVelBarrier line 256, col 1 to line 256, col 15 of module Ass01>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 256, col 23 to line 256, col 54 of module Ass01: 665
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 257, col 23 to line 257, col 51 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 258, col 23 to line 258, col 42 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 259, col 23 to line 259, col 63 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 260, col 23 to line 262, col 60 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<NewIter line 264, col 1 to line 264, col 7 of module Ass01>: 2:59
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 264, col 15 to line 264, col 38 of module Ass01: 724
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 264, col 15 to line 264, col 26 of module Ass01: 665
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 265, col 15 to line 265, col 30 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 266, col 15 to line 266, col 62 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 267, col 15 to line 269, col 73 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MainLoopW1 line 276, col 1 to line 276, col 10 of module Ass01>: 24:86
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 276, col 18 to line 276, col 45 of module Ass01: 747
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 276, col 18 to line 276, col 30 of module Ass01: 661
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 277, col 21 to line 277, col 34 of module Ass01: 86
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 278, col 26 to line 278, col 80 of module Ass01: 86
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 279, col 29 to line 279, col 67 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 280, col 18 to line 283, col 45 of module Ass01: 86
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncReadyToStartW1 line 285, col 1 to line 285, col 17 of module Ass01>: 22:75
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 285, col 25 to line 285, col 59 of module Ass01: 730
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 285, col 25 to line 285, col 37 of module Ass01: 655
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 286, col 25 to line 286, col 56 of module Ass01: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 287, col 25 to line 287, col 73 of module Ass01: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 288, col 25 to line 291, col 46 of module Ass01: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ReadyToStartW1 line 293, col 1 to line 293, col 14 of module Ass01>: 19:68
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 293, col 22 to line 293, col 53 of module Ass01: 717
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 293, col 22 to line 293, col 34 of module Ass01: 649
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 294, col 25 to line 294, col 40 of module Ass01: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 295, col 30 to line 295, col 48 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 296, col 33 to line 296, col 40 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 297, col 33 to line 297, col 50 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 298, col 22 to line 298, col 64 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 299, col 22 to line 301, col 80 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdVelB1 line 303, col 1 to line 303, col 8 of module Ass01>: 29:61
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 303, col 16 to line 303, col 41 of module Ass01: 706
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 303, col 16 to line 303, col 28 of module Ass01: 645
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 304, col 16 to line 304, col 69 of module Ass01: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 305, col 16 to line 305, col 58 of module Ass01: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 306, col 16 to line 309, col 35 of module Ass01: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdVelB2 line 311, col 1 to line 311, col 8 of module Ass01>: 23:53
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 311, col 16 to line 311, col 41 of module Ass01: 694
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 311, col 16 to line 311, col 28 of module Ass01: 641
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 312, col 16 to line 312, col 69 of module Ass01: 53
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 313, col 16 to line 313, col 65 of module Ass01: 53
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 314, col 16 to line 317, col 35 of module Ass01: 53
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedVelw1 line 319, col 1 to line 319, col 15 of module Ass01>: 25:49
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 319, col 23 to line 319, col 55 of module Ass01: 686
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 319, col 23 to line 319, col 35 of module Ass01: 637
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 320, col 23 to line 320, col 60 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 321, col 23 to line 321, col 69 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 322, col 23 to line 324, col 81 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedVelW1 line 326, col 1 to line 326, col 12 of module Ass01>: 18:37
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 326, col 20 to line 326, col 49 of module Ass01: 670
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 326, col 20 to line 326, col 32 of module Ass01: 633
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 327, col 23 to line 327, col 41 of module Ass01: 63
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 328, col 28 to line 328, col 58 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 329, col 31 to line 329, col 50 of module Ass01: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 330, col 31 to line 330, col 60 of module Ass01: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 331, col 20 to line 331, col 62 of module Ass01: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 332, col 20 to line 334, col 78 of module Ass01: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdPosB1 line 336, col 1 to line 336, col 8 of module Ass01>: 16:37
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 336, col 16 to line 336, col 41 of module Ass01: 666
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 336, col 16 to line 336, col 28 of module Ass01: 629
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 337, col 16 to line 337, col 69 of module Ass01: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 338, col 16 to line 338, col 58 of module Ass01: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 339, col 16 to line 342, col 35 of module Ass01: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdPosB2 line 344, col 1 to line 344, col 8 of module Ass01>: 11:23
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 344, col 16 to line 344, col 41 of module Ass01: 648
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 344, col 16 to line 344, col 28 of module Ass01: 625
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 345, col 16 to line 345, col 69 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 346, col 16 to line 346, col 65 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 347, col 16 to line 350, col 35 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedPosW1 line 352, col 1 to line 352, col 15 of module Ass01>: 6:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 352, col 23 to line 352, col 55 of module Ass01: 645
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 352, col 23 to line 352, col 35 of module Ass01: 621
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 353, col 23 to line 353, col 60 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 354, col 23 to line 354, col 69 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 355, col 23 to line 357, col 81 of module Ass01: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedPosW1 line 359, col 1 to line 359, col 12 of module Ass01>: 6:58
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 359, col 20 to line 359, col 49 of module Ass01: 675
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 359, col 20 to line 359, col 32 of module Ass01: 617
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 360, col 23 to line 360, col 41 of module Ass01: 102
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 361, col 28 to line 361, col 57 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 363, col 31 to line 363, col 59 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 364, col 20 to line 364, col 64 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 365, col 20 to line 367, col 74 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MainLoopW2 line 373, col 1 to line 373, col 10 of module Ass01>: 64:88
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 373, col 18 to line 373, col 45 of module Ass01: 703
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 373, col 18 to line 373, col 30 of module Ass01: 615
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 374, col 21 to line 374, col 34 of module Ass01: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 375, col 26 to line 375, col 80 of module Ass01: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 376, col 29 to line 376, col 67 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 377, col 18 to line 380, col 45 of module Ass01: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncReadyToStartW2 line 382, col 1 to line 382, col 17 of module Ass01>: 54:76
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 382, col 25 to line 382, col 59 of module Ass01: 687
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 382, col 25 to line 382, col 37 of module Ass01: 611
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 383, col 25 to line 383, col 56 of module Ass01: 76
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 384, col 25 to line 384, col 73 of module Ass01: 76
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 385, col 25 to line 388, col 46 of module Ass01: 76
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ReadyToStartW2 line 390, col 1 to line 390, col 14 of module Ass01>: 55:68
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 390, col 22 to line 390, col 53 of module Ass01: 675
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 390, col 22 to line 390, col 34 of module Ass01: 607
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 391, col 25 to line 391, col 40 of module Ass01: 78
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 392, col 30 to line 392, col 48 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 393, col 33 to line 393, col 40 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 394, col 33 to line 394, col 50 of module Ass01: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 395, col 22 to line 395, col 64 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 396, col 22 to line 398, col 80 of module Ass01: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdVelB3 line 400, col 1 to line 400, col 8 of module Ass01>: 46:59
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 400, col 16 to line 400, col 41 of module Ass01: 662
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 400, col 16 to line 400, col 28 of module Ass01: 603
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 401, col 16 to line 401, col 69 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 402, col 16 to line 402, col 58 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 403, col 16 to line 406, col 35 of module Ass01: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdVelB4 line 408, col 1 to line 408, col 8 of module Ass01>: 42:50
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 408, col 16 to line 408, col 41 of module Ass01: 649
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 408, col 16 to line 408, col 28 of module Ass01: 599
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 409, col 16 to line 409, col 69 of module Ass01: 50
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 410, col 16 to line 410, col 65 of module Ass01: 50
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 411, col 16 to line 414, col 35 of module Ass01: 50
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedVelw2 line 416, col 1 to line 416, col 15 of module Ass01>: 34:42
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 416, col 23 to line 416, col 55 of module Ass01: 637
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 416, col 23 to line 416, col 35 of module Ass01: 595
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 417, col 23 to line 417, col 60 of module Ass01: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 418, col 23 to line 418, col 69 of module Ass01: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 419, col 23 to line 421, col 81 of module Ass01: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedVelW2 line 423, col 1 to line 423, col 12 of module Ass01>: 27:34
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 423, col 20 to line 423, col 49 of module Ass01: 625
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 423, col 20 to line 423, col 32 of module Ass01: 591
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 424, col 23 to line 424, col 41 of module Ass01: 48
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 425, col 28 to line 425, col 58 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 426, col 31 to line 426, col 50 of module Ass01: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 427, col 31 to line 427, col 60 of module Ass01: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 428, col 20 to line 428, col 62 of module Ass01: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 429, col 20 to line 431, col 78 of module Ass01: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdPosB3 line 433, col 1 to line 433, col 8 of module Ass01>: 19:28
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 433, col 16 to line 433, col 41 of module Ass01: 615
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 433, col 16 to line 433, col 28 of module Ass01: 587
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 434, col 16 to line 434, col 69 of module Ass01: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 435, col 16 to line 435, col 58 of module Ass01: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 436, col 16 to line 439, col 35 of module Ass01: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdPosB4 line 441, col 1 to line 441, col 8 of module Ass01>: 15:23
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 441, col 16 to line 441, col 41 of module Ass01: 606
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 441, col 16 to line 441, col 28 of module Ass01: 583
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 442, col 16 to line 442, col 69 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 443, col 16 to line 443, col 65 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 444, col 16 to line 447, col 35 of module Ass01: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncUpdatedPosW2 line 449, col 1 to line 449, col 15 of module Ass01>: 11:19
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 449, col 23 to line 449, col 55 of module Ass01: 598
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 449, col 23 to line 449, col 35 of module Ass01: 579
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 450, col 23 to line 450, col 60 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 451, col 23 to line 451, col 69 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 452, col 23 to line 454, col 81 of module Ass01: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<UpdatedPosW2 line 456, col 1 to line 456, col 12 of module Ass01>: 29:58
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 456, col 20 to line 456, col 49 of module Ass01: 633
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 456, col 20 to line 456, col 32 of module Ass01: 575
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 457, col 23 to line 457, col 41 of module Ass01: 104
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 458, col 28 to line 458, col 57 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 460, col 31 to line 460, col 59 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 461, col 20 to line 461, col 64 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 462, col 20 to line 464, col 74 of module Ass01: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 471, col 1 to line 471, col 11 of module Ass01>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 471, col 19 to line 471, col 56 of module Ass01: 575
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 472, col 19 to line 472, col 32 of module Ass01: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(41) at 2022-03-30 10:02:41: 1.526 states generated (39.756 s/min), 677 distinct states found (17.637 ds/min), 102 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+1526 states generated, 677 distinct states found, 102 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 41.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2327ms at (2022-03-30 10:02:41)
+@!@!@ENDMSG 2186 @!@!@

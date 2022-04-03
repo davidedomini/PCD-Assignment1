@@ -1,4 +1,6 @@
-package ass01.concurrent;
+package ass01.concurrent.WithGui;
+
+import ass01.concurrent.SimulationModel;
 
 public interface ModelObserver {
 
