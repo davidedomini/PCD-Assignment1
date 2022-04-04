@@ -105,6 +105,8 @@ public class SimulationView implements ModelObserver {
 				controller.restart();
 				stopButton.setEnabled(true);
 				startButton.setEnabled(false);
+				startButton.transferFocus();
+				stopButton.transferFocus();
 			}
 		}
 	}
